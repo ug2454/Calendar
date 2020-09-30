@@ -64,12 +64,14 @@ class _DropdownScreenState extends State<DropdownScreen> {
       items: <String>[
         'Always',
         'Rare',
-      ].map((String value) {
-        return DropdownMenuItem(
-          child: Text('$value'),
-          value: value,
-        );
-      }).toList(),
+      ].map(
+        (String value) {
+          return DropdownMenuItem(
+            child: Text('$value'),
+            value: value,
+          );
+        },
+      ).toList(),
       onChanged: (value) {
         print(value);
         setState(() {
